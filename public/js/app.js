@@ -1,5 +1,8 @@
 
 angular.module("gpsApp",['ngAnimate','ngGeolocation','ui-leaflet','ngMaterial', 'ngMessages'])
+.config(function( $mdGestureProvider ) {
+        $mdGestureProvider.skipClickHijack();
+})
   .config(function($mdThemingProvider) {
     $mdThemingProvider.theme('default')
     .primaryPalette('cyan', {
@@ -9,4 +12,4 @@ angular.module("gpsApp",['ngAnimate','ngGeolocation','ui-leaflet','ngMaterial', 
           'hue-3': 'A100' // use shade A100 for the <code>md-hue-3</code> class
         })
     .dark();
-  })
+  });

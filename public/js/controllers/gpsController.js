@@ -103,6 +103,6 @@ angular.module("gpsApp").controller("GPSController",['$scope','$geolocation','$t
                        });
       }); */
 
-
+     
 
 }]);
