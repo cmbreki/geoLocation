@@ -1,6 +1,6 @@
 # where are U now-app
 
-A simple project for location detection using the HTML5 Geolocation API.
+A simple app for location detection using the HTML5 Geolocation API.
 
 ### Dependencies
 
