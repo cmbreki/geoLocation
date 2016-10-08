@@ -37,10 +37,9 @@
 
                 <!-- <md-button >Add Point</md-button> -->
               </md-content>
-
             </div>
           <div flex-gt-sm="56" flex-offset-sm="5" flex="100" >
-              <leaflet  lf-center="myposition" layers="layers" markers="markers" width="100%" height="480px"></leaflet>
+              <leaflet tt-leaflet-flex-fit lf-center="myposition" layers="layers" markers="markers" width="100%" height="480px"></leaflet>
           </div>
         </div>
         <div layout="row" id="footerLayout" layout-align="center center" ng-cloak>
@@ -76,6 +75,8 @@
           <!-- Services -->
 
           <!--Directives -->
+          <script src="js/directives/fit-flex-directive.js"></script>
+
 
        </body>
 </html>
