@@ -1,0 +1,35 @@
+{
+  "name": "node-js-getting-started",
+  "version": "0.2.5",
+  "description": "A sample Node.js app using Express 4",
+  "engines": {
+    "node": "5.9.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "angular": "^1.5.7",
+    "angular-animate": "^1.5.7",
+    "angular-aria": "^1.5.7",
+    "angular-chart.js": "^1.0.0-alpha8",
+    "angular-material": "^1.1.0-rc.5",
+    "body-parser": "^1.15.2",
+    "chart.js": "^2.2.0-rc.1",
+    "ejs": "2.4.1",
+    "express": "^4.13.3",
+    "moment": "^2.14.1",
+    "pg": "^6.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/node-js-getting-started"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "GPS Application",
+  "authors": [
+    "Christina-Marina Breki <cbreki@hotmail.gr>"
+  ],
+  "description": "An GPS application using HTML5 Geolocation",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.8",
+    "angular-animate": "1.5.8",
+    "ngGeolocation": "^0.0.8",
+    "angular-simple-logger": "^0.1.7",
+    "leaflet": "0.7.7",
+    "leaflet-plugins": "1.6.1",
+    "ui-leaflet": "1.0.2",
+    "ui-leaflet-layers": "0.1.2",
+    "angular-material": "1.1.1"
+  },
+  "resolutions": {
+    "ui-leaflet": "master",
+    "angular": "1.5.8",
+    "angular-animate": "1.5.8"
+  }
+}

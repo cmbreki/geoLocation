@@ -1,0 +1,62 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(REIS-Regular.woff);
+    font-weight: bold;
+}
+
+body{
+  background-image: url("background.jpg");
+  background-repeat: repeat-y;
+  z-index: -1;
+}
+
+#title{
+  background-color: rgba(0, 0, 0, 0.1);
+  font-size:90px;
+  font-family: myFirstFont;
+}
+
+#jumbotron{
+  height:180px;
+  /*background: #2c383f;*/
+}
+
+#footerLayout{
+  margin-top: 70px;
+  height:60px;
+  background: #2c383f;
+}
+
+#footer{
+  /*display:none;*/
+  font-style:italic;
+  color:grey;
+}
+
+.md-toolbar{
+   height: 100%;
+}
+
+#form{
+   height:416px;
+}
+
+@media screen and (max-width: 760px) {
+
+  #title{
+    font-size:60px;
+  }
+
+  #form{
+     height:auto;
+  }
+
+}
+
+@media screen and (max-width: 460px) {
+
+  #title{
+    font-size:45px;
+  }
+
+}
