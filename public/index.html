@@ -35,6 +35,15 @@
                     <label>Longitude</label>
                     <input ng-model="myPosition.coords.longitude" type="number">
                   </md-input-container>
+                  <md-input-container>
+                    <label>Location</label>
+                    <input ng-model="location.title">
+                  </md-input-container>
+                  <div layout="row" layout-align="end end">
+                  <md-button class="md-fab md-mini" aria-label="POI">
+                      <md-icon md-svg-src="img/icons/location.svg"></md-icon>
+                  </md-button>
+                  </div>
 
                 <!-- <md-button >Add Point</md-button> -->
               </md-content>
@@ -53,7 +62,7 @@
           <!--Angular-->
             <script src="bower_components/angular/angular.min.js"> </script>
             <script src="bower_components/angular-animate/angular-animate.min.js"> </script>
-
+            <script src="bower_components/angular-resource/angular-resource.min.js"></script>
             <!--Angular Material-->
             <script src="bower_components/angular-animate/angular-animate.min.js"></script>
             <script src="bower_components/angular-aria/angular-aria.min.js"></script>
@@ -76,6 +85,8 @@
           <script src="js/app.js"></script>
           <script src="js/controllers/gpsController.js"></script>
           <!-- Services -->
+          <script src="js/services/points.js"></script>
+
 
           <!--Directives -->
           <script src="js/directives/fit-flex-directive.js"></script>

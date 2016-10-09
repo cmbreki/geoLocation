@@ -71,6 +71,13 @@ body{
    height:416px;
 }
 
+md-icon svg{
+  fill : #fff;
+}
+.md-button.md-fab.md-mini{
+  float:right;
+}
+
 @media screen and (max-width: 760px) {
 
   #title{
@@ -95,3 +102,7 @@ body{
   }
 
 }
+
+.my-div-icon {
+	background: #666;
+	}
