@@ -47,7 +47,7 @@ body{
 }
 
 #jumbotron{
-  height:180px;
+  height:160px;
   /*background: #2c383f;*/
 }
 
@@ -79,6 +79,11 @@ body{
 
   #form{
      height:auto;
+  }
+
+  #jumbotron{
+    height:80px;
+    /*background: #2c383f;*/
   }
 
 }
