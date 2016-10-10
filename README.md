@@ -18,6 +18,9 @@ A simple app for location detection using the HTML5 Geolocation API.
 - Angular-ui-router 0.3.1
 - Angular-local-storage v0.5.2
 
+## Description
+Before visiting the page, the user must enable the __GPS__ on the mobile device. I case of GPS inavailability, the API is able to retrieve the current position using alternative sources such as IP address.
+
 
 
 ## Database
@@ -39,4 +42,4 @@ Insert a POI:
 ```
 INSERT INTO points (time,name,latitude,longitude) VALUES (now(),'Home',37.9838096,23.7275388);
 ```
-[site](https://where-r-u-now-456789.herokuapp.com/)
+[site](https://where-are-u-now-123456.herokuapp.com)

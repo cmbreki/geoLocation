@@ -18,11 +18,12 @@ $scope.$watch('currentNavItem', function(newValue){
          //console.log($scope.zoom);
 }); */
 console.log($location.path());
-if($location.path()==='/location'){
-  $scope.currentNavItem='currentLocation';
-}
-else if ($location.path()==='/pois'){
+
+if ($location.path()==='/pois'){
   $scope.currentNavItem='POI';
+}
+else{
+    $scope.currentNavItem='currentLocation';
 }
 
 
