@@ -68,7 +68,7 @@ body{
 }
 
 #form{
-   height:416px;
+   height:456px;
 }
 
 md-icon svg{
@@ -119,3 +119,7 @@ md-toast.md-success-toast-theme .md-toast-content{
 .my-div-icon {
 	background: #666;
 	}
+
+  #menu{
+    background-color: rgba(0,0,0,0.1);
+  }

@@ -12,60 +12,35 @@
         <link rel="stylesheet" href="css/style.css"/>
       </head>
       <body>
-        <div id="back">
-        <div layout="row" id="jumbotron" layout-align="center center" ng-cloak>
-          <h1 id="title">Where are U now?</h1>
-        </div>
+              <div id="back">
+              <div layout="row" id="jumbotron" layout-align="center center" ng-cloak>
+                <h1 id="title">Where are U now?</h1>
+              </div>
 
-        <div layout="row" ng-controller="GPSController" layout-xs="column" layout-padding ng-cloak>
-
-          <div flex-gt-sm="33" flex="100" >
-            <md-toolbar class="md-default">
-                <div class="md-toolbar-tools">
-                  <h2 class="md-flex"> Current location</h2>
+              <md-content class="md-padding" id='menu' ng-init="currentNavItem='currentLocation'" ng-cloak>
+                <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+                  <md-nav-item md-nav-sref="currentLocation" name="currentLocation">Me</md-nav-item>
+                  <md-nav-item md-nav-sref="myPOIs" name="POI">Everybody</md-nav-item>
+                </md-nav-bar>
+                <div class="ext-content">
+                  <ui-view></ui-view>
                 </div>
-              </md-toolbar>
-              <md-content layout-gt-sm="column" layout-padding id="form">
-
-                  <md-input-container>
-                    <label>Latitude</label>
-                    <input ng-model="point.coords.latitude" type="number">
-                  </md-input-container>
-                  <md-input-container>
-                    <label>Longitude</label>
-                    <input ng-model="point.coords.longitude" type="number">
-                  </md-input-container>
-                  <md-input-container>
-                    <label>Location</label>
-                    <input ng-model="point.name">
-                  </md-input-container>
-                  <div layout="row" layout-align="end end">
-                  <md-button class="md-fab md-mini" aria-label="POI" ng-click="savePOI(point)">
-                      <md-icon md-svg-src="img/icons/location.svg"></md-icon>
-                  </md-button>
-                  </div>
-
-                <!-- <md-button >Add Point</md-button> -->
               </md-content>
-            </div>
-          <div flex-gt-sm="56" flex-offset-sm="5" flex="100" >
-              <leaflet tt-leaflet-flex-fit lf-center="myposition" layers="layers" markers="markers" width="100%" height="480px"></leaflet>
-          </div>
-        </div>
-        <div layout="row" id="footerLayout" layout-align="center center" ng-cloak>
-          <p id="footer">by xtn</p>
-        </div>
 
-      </div>
+              <div layout="row" id="footerLayout" layout-align="center center" ng-cloak>
+                <p id="footer">by xtn</p>
+              </div>
+            </div>
 
           <!--JS -->
           <!--Angular-->
             <script src="bower_components/angular/angular.min.js"> </script>
             <script src="bower_components/angular-animate/angular-animate.min.js"> </script>
+            <script src="bower_components/angular-aria/angular-aria.min.js"></script>
             <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+            <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
             <!--Angular Material-->
             <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-            <script src="bower_components/angular-aria/angular-aria.min.js"></script>
             <script src="bower_components/angular-messages/angular-messages.min.js"></script>
             <script src="bower_components/angular-material/angular-material.js"></script>
             <!--Google Maps API-->
@@ -78,18 +53,19 @@
            <script src="bower_components/leaflet-plugins/layer/tile/Google.js"></script>
            <script src="bower_components/ui-leaflet-layers/dist/ui-leaflet-layers.min.js"></script>
 
-
         	<!-- GEOLocation-->
          	<script src="bower_components/ngGeolocation/ngGeolocation.min.js"></script>
+
           <!-- Controllers -->
           <script src="js/app.js"></script>
           <script src="js/controllers/gpsController.js"></script>
           <!-- Services -->
           <script src="js/services/point.js"></script>
 
-
           <!--Directives -->
           <script src="js/directives/fit-flex-directive.js"></script>
+          <!--Routing -->
+          <script src="js/route.js"></script>
 
 
        </body>

@@ -1,5 +1,5 @@
 
-angular.module("gpsApp",['ngAnimate','ngResource','ngGeolocation','ui-leaflet','ngMaterial', 'ngMessages'])
+angular.module("gpsApp",['ngAnimate','ngResource','ngGeolocation','ui-leaflet','ngMaterial', 'ngMessages','ui.router'])
 .config(function( $mdGestureProvider ) {
         $mdGestureProvider.skipClickHijack();
 })
@@ -11,8 +11,8 @@ angular.module("gpsApp",['ngAnimate','ngResource','ngGeolocation','ui-leaflet','
           'hue-2': '500', // use shade 600 for the <code>md-hue-2</code> class
           'hue-3': '500' // use shade A100 for the <code>md-hue-3</code> class
         })
-    .accentPalette('deep-orange', {
-      'default': 'A200' // use shade 200 for default, and keep all other shades the same
+    .accentPalette('orange', {
+      'default': '900' // use shade 200 for default, and keep all other shades the same
     })
     .dark();
 

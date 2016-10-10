@@ -78,7 +78,7 @@ $scope.mark={};
 
         })
 
-      
+
         $scope.point=$geolocation.position;
         console.log($scope.point);
 
@@ -149,7 +149,7 @@ $scope.mark={};
 
        console.log("Finally");
   });
-  };
+};
 
 
 

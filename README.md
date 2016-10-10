@@ -15,6 +15,7 @@ A simple app for location detection using the HTML5 Geolocation API.
 - ui-leaflet 1.0.2
 - ui-leaflet-layers 0.1.2
 - Angular-material 1.1.1  
+- Angular-ui-router 0.3.1
 
 
 ## Database
