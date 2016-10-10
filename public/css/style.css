@@ -31,18 +31,19 @@ body{
 #back::after {
   content: "";
   background: url("background.jpg");
-  opacity: 0.5;
+  opacity: 0.6;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
+  background-repeat: repeat-x;
   z-index: -1;
 }
 
 #title{
   /*background-color: rgba(0, 0, 0, 0.1);*/
-  font-size:90px;
+  font-size:100px;
   font-family: myFirstFont;
 }
 
@@ -121,5 +122,5 @@ md-toast.md-success-toast-theme .md-toast-content{
 	}
 
   #menu{
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0,0,0,0.0);
   }

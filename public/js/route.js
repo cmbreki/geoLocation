@@ -11,6 +11,7 @@ angular.module('gpsApp').config(function ($stateProvider,$urlRouterProvider) {
        })
     $stateProvider.state('myPOIs', {
            url: '/pois',
+           controller : 'POIListController',
            templateUrl: '/views/poisList.html'
        });
 
