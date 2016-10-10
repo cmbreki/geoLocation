@@ -15,4 +15,7 @@ angular.module("gpsApp",['ngAnimate','ngResource','ngGeolocation','ui-leaflet','
       'default': 'A200' // use shade 200 for default, and keep all other shades the same
     })
     .dark();
+
+    $mdThemingProvider.theme("success-toast")
+
   });

@@ -29,18 +29,18 @@
 
                   <md-input-container>
                     <label>Latitude</label>
-                    <input ng-model="myPosition.coords.latitude" type="number">
+                    <input ng-model="point.coords.latitude" type="number">
                   </md-input-container>
                   <md-input-container>
                     <label>Longitude</label>
-                    <input ng-model="myPosition.coords.longitude" type="number">
+                    <input ng-model="point.coords.longitude" type="number">
                   </md-input-container>
                   <md-input-container>
                     <label>Location</label>
-                    <input ng-model="location.title">
+                    <input ng-model="point.name">
                   </md-input-container>
                   <div layout="row" layout-align="end end">
-                  <md-button class="md-fab md-mini" aria-label="POI">
+                  <md-button class="md-fab md-mini" aria-label="POI" ng-click="savePOI(point)">
                       <md-icon md-svg-src="img/icons/location.svg"></md-icon>
                   </md-button>
                   </div>
@@ -85,7 +85,7 @@
           <script src="js/app.js"></script>
           <script src="js/controllers/gpsController.js"></script>
           <!-- Services -->
-          <script src="js/services/points.js"></script>
+          <script src="js/services/point.js"></script>
 
 
           <!--Directives -->

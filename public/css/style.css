@@ -78,6 +78,19 @@ md-icon svg{
   float:right;
 }
 
+/*toast*/
+
+md-toast.md-success-toast-theme .md-toast-content{
+
+        background-color: green !important;
+}
+
+@media (max-width: 959px) {
+    md-toast{
+      top: 0;
+    }
+}
+
 @media screen and (max-width: 760px) {
 
   #title{

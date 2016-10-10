@@ -1,4 +1,4 @@
-angular.module("gpsApp").controller("GPSController",['$scope','$geolocation','$timeout','Points', function($scope,$geolocation,$timeout,Points){
+angular.module("gpsApp").controller("GPSController",['$scope','$geolocation','$timeout','Point','$mdToast', function($scope,$geolocation,$timeout,Point,$mdToast){
 
 
 $scope.mark={};
@@ -78,29 +78,30 @@ $scope.mark={};
 
         })
 
-      $scope.myPosition=$geolocation.position;
-      console.log($scope.myPosition);
+      
+        $scope.point=$geolocation.position;
+        console.log($scope.point);
 
 
     $scope.$on('$geolocation.position.changed', function(event, args) {
-          console.log("Signal broadcasted");
-          angular.extend($scope, {
-                          myposition: {
-                                lat: $scope.myPosition.coords.latitude,
-                                lng: $scope.myPosition.coords.longitude,
-                                /*zoom: $scope.zoom*/
-                                zoom: 16
+        console.log("Signal broadcasted");
+
+        angular.extend($scope, {
+                        myposition: {
+                              lat: $scope.point.coords.latitude,
+                              lng: $scope.point.coords.longitude,
+                              zoom: 18
 
 
 
-                           },
-                           markers: {
-                               m1: {
-                                   lat: $scope.myPosition.coords.latitude,
-                                   lng: $scope.myPosition.coords.longitude,
+                         },
+                         markers: {
+                             m1: {
+                                 lat: $scope.point.coords.latitude,
+                                 lng: $scope.point.coords.longitude,
+                          }
+                       }
 
-                              }
-                    }
           })
 
       });
@@ -111,9 +112,9 @@ $scope.mark={};
     });
 
 
-    Points.query().$promise.then(function (result) {
+    Point.query().$promise.then(function (result) {
        $scope.poi =  result;
-       console.log($scope.poi);
+       //console.log($scope.poi);
 
        angular.forEach(result, function(value, key) {
             $scope.mark[key]=  {
@@ -127,6 +128,28 @@ $scope.mark={};
       drawMarkers();
     });
 
+////Add point
+
+
+    $scope.savePOI = function(point){
+      var test={name:point.name,coords:{latitude:point.coords.latitude,longitude:point.coords.longitude}};
+      var poi = new Point(test);
+      console.log(poi)
+      poi.$save().then(function(){
+       $mdToast.show(
+          $mdToast.simple()
+          .textContent('Location saved.')
+          .position('top right')
+          .hideDelay(2000)
+          .theme("success-toast")
+        );
+      $scope.point.name="";
+     })
+     .finally(function(){
+
+       console.log("Finally");
+  });
+  };
 
 
 
