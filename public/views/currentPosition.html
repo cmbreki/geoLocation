@@ -23,6 +23,9 @@
           <label>Accuracy: {{point.coords.accuracy}}</label>
           <div layout="row" layout-align="end end">
           <md-button class="md-fab" aria-label="POI" ng-click="savePOI(point)">
+            <md-tooltip md-direction="top">
+                Add my location
+             </md-tooltip>
               <md-icon md-svg-src="img/icons/location.svg"></md-icon>
           </md-button>
           </div>

@@ -1,12 +1,7 @@
-angular.module("gpsApp").controller("GPSController",['$scope','$geolocation','$timeout','Point','$mdToast', function($scope,$geolocation,$timeout,Point,$mdToast){
+angular.module("gpsApp").controller("POIListController",['$scope','$geolocation','$timeout','Point','$mdToast', function($scope,$geolocation,$timeout,Point,$mdToast){
 
 
 $scope.mark={};
-/*$geolocation.watchPosition({
-            timeout: 60000,
-            maximumAge: 250,
-            enableHighAccuracy: true
-        });*/
 
         var drawMarkers=function(){
           angular.extend($scope, {
@@ -71,47 +66,7 @@ $scope.mark={};
                     });
         }); */
 
-   $geolocation.watchPosition({
-            timeout: 60000,
-            maximumAge: 250,
-            enableHighAccuracy: true
-
-        })
-
-
-        $scope.point=$geolocation.position;
-        console.log($scope.point);
-
-
-    $scope.$on('$geolocation.position.changed', function(event, args) {
-        console.log("Signal broadcasted");
-
-        angular.extend($scope, {
-                        myposition: {
-                              lat: $scope.point.coords.latitude,
-                              lng: $scope.point.coords.longitude,
-                              zoom: 18
-
-
-
-                         },
-                         markers: {
-                             m1: {
-                                 lat: $scope.point.coords.latitude,
-                                 lng: $scope.point.coords.longitude,
-                          }
-                       }
-
-          })
-
-      });
-
-    $scope.$on('$geolocation.position.error', function(event, args) {
-       console.log($geolocation.position.error);
-       alert($geolocation.position.error);
-    });
-
-
+  
     Point.query().$promise.then(function (result) {
        $scope.poi =  result;
        //console.log($scope.poi);
@@ -128,33 +83,7 @@ $scope.mark={};
       drawMarkers();
     });
 
-////Add point
 
-
-    $scope.savePOI = function(point){
-      var test={name:point.name,coords:{latitude:point.coords.latitude,longitude:point.coords.longitude}};
-      var poi = new Point(test);
-      console.log(poi)
-      poi.$save().then(function(){
-       $mdToast.show(
-          $mdToast.simple()
-          .textContent('Location saved.')
-          .position('top right')
-          .hideDelay(2000)
-          .theme("success-toast")
-        );
-      $scope.point.name="";
-     })
-     .finally(function(){
-
-       console.log("Finally");
-  });
-};
-
-$scope.tooltip = {
-    showTooltip : false,
-    tipDirection : 'top'
-  };
 
 
 }]);
