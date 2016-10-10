@@ -66,6 +66,13 @@ angular.module("gpsApp").controller("POIListController",['$scope','$geolocation'
         $scope.deletePOI = function(point){
           point.$remove().then(function(){
             console.log('deleted');
+            $mdToast.show(
+               $mdToast.simple()
+               .textContent('Location deleted.')
+               .position('top right')
+               .hideDelay(2000)
+               .theme("error-toast")
+             );
             refresh();
         });
 

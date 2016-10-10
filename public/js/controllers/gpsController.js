@@ -132,23 +132,31 @@ $scope.mark={};
 
 
     $scope.savePOI = function(point){
-      var test={name:point.name,coords:{latitude:point.coords.latitude,longitude:point.coords.longitude}};
-      var poi = new Point(test);
-      console.log(poi)
-      poi.$save().then(function(){
-       $mdToast.show(
-          $mdToast.simple()
-          .textContent('Location saved.')
-          .position('top right')
-          .hideDelay(2000)
-          .theme("success-toast")
-        );
-      $scope.point.name="";
-     })
-     .finally(function(){
+  if(angular.isUndefined($scope.point.coords.latitude)||angular.isUndefined($scope.point.coords.longitude)){
+    alert("Undefined");
 
-       console.log("Finally");
-  });
+  }
+  else{
+
+        var test={name:point.name,coords:{latitude:point.coords.latitude,longitude:point.coords.longitude}};
+        var poi = new Point(test);
+        console.log(poi)
+        poi.$save().then(function(){
+         $mdToast.show(
+            $mdToast.simple()
+            .textContent('Location saved.')
+            .position('top right')
+            .hideDelay(2000)
+            .theme("success-toast")
+          );
+        $scope.point.name="";
+       })
+       .finally(function(){
+
+         console.log("Finally");
+
+    });
+ }
 };
 
 $scope.tooltip = {
