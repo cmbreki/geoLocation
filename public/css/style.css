@@ -47,7 +47,7 @@ body{
 }
 
 #jumbotron{
-  height:180px;
+  height:160px;
   /*background: #2c383f;*/
 }
 
@@ -68,7 +68,27 @@ body{
 }
 
 #form{
-   height:416px;
+   height:456px;
+}
+
+md-icon svg{
+  fill : #fff;
+}
+.md-button.md-fab.md-mini{
+  float:right;
+}
+
+/*toast*/
+
+md-toast.md-success-toast-theme .md-toast-content{
+
+        background-color: green !important;
+}
+
+@media (max-width: 959px) {
+    md-toast{
+      top: 0;
+    }
 }
 
 @media screen and (max-width: 760px) {
@@ -81,6 +101,11 @@ body{
      height:auto;
   }
 
+  #jumbotron{
+    height:80px;
+    /*background: #2c383f;*/
+  }
+
 }
 
 @media screen and (max-width: 460px) {
@@ -90,3 +115,11 @@ body{
   }
 
 }
+
+.my-div-icon {
+	background: #666;
+	}
+
+  #menu{
+    background-color: rgba(0,0,0,0.1);
+  }
