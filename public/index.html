@@ -12,12 +12,12 @@
         <link rel="stylesheet" href="css/style.css"/>
       </head>
       <body>
-              <div id="back">
+              <div id="back" ng-controller="appController">
               <div layout="row" id="jumbotron" layout-align="center center" ng-cloak>
                 <h1 id="title">Where are U now?</h1>
               </div>
 
-              <md-content class="md-padding" id='menu' ng-init="currentNavItem='currentLocation'" ng-cloak>
+              <md-content class="md-padding" id='menu' ng-cloak>
                 <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
                   <md-nav-item md-nav-sref="currentLocation" name="currentLocation">Me</md-nav-item>
                   <md-nav-item md-nav-sref="myPOIs" name="POI">Everybody</md-nav-item>
@@ -39,6 +39,7 @@
             <script src="bower_components/angular-aria/angular-aria.min.js"></script>
             <script src="bower_components/angular-resource/angular-resource.min.js"></script>
             <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+            <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
             <!--Angular Material-->
             <script src="bower_components/angular-animate/angular-animate.min.js"></script>
             <script src="bower_components/angular-messages/angular-messages.min.js"></script>
@@ -58,6 +59,7 @@
 
           <!-- Controllers -->
           <script src="js/app.js"></script>
+          <script src="js/controllers/appController.js"></script>
           <script src="js/controllers/gpsController.js"></script>
           <script src="js/controllers/poiListController.js"></script>
           <!-- Services -->

@@ -1,5 +1,5 @@
 
-angular.module("gpsApp",['ngAnimate','ngResource','ngGeolocation','ui-leaflet','ngMaterial', 'ngMessages','ui.router'])
+angular.module("gpsApp",['ngAnimate','ngResource','ngGeolocation','ui-leaflet','ngMaterial', 'ngMessages','ui.router','LocalStorageModule'])
 .config(function( $mdGestureProvider ) {
         $mdGestureProvider.skipClickHijack();
 })

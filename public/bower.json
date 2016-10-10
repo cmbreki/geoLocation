@@ -25,7 +25,8 @@
     "ui-leaflet-layers": "0.1.2",
     "angular-material": "1.1.1",
     "angular-resource": "^1.5.8",
-    "angular-ui-router": "ui-router#0.2.14"
+    "angular-ui-router": "ui-router#0.2.14",
+    "angular-local-storage": "^0.5.2"
   },
   "resolutions": {
     "ui-leaflet": "master",
