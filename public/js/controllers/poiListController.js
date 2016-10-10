@@ -7,7 +7,7 @@ angular.module("gpsApp").controller("POIListController",['$scope','$geolocation'
                         myposition: {
                             lat: 37.97565,
                             lng: 23.73400,
-                            zoom: 12
+                            zoom:8
                          },
                          layers: {
                            baselayers: {

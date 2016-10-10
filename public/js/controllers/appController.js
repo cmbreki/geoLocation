@@ -22,7 +22,7 @@ if($location.path()==='/location'){
   $scope.currentNavItem='currentLocation';
 }
 else if ($location.path()==='/pois'){
-  $scope.currentNavItem='myPOIs';
+  $scope.currentNavItem='POI';
 }
 
 

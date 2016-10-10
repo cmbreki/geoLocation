@@ -111,23 +111,6 @@ $scope.mark={};
        alert($geolocation.position.error);
     });
 
-
-    Point.query().$promise.then(function (result) {
-       $scope.poi =  result;
-       //console.log($scope.poi);
-
-       angular.forEach(result, function(value, key) {
-            $scope.mark[key]=  {
-                lat: value.latitude,
-                lng: value.longitude,
-                focus: false,
-                message: value.name
-              }
-            });
-      console.log($scope.mark)
-      drawMarkers();
-    });
-
 ////Add point
 
 
